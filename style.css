@@ -1,8 +1,42 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: rgba(222, 184, 135, 0.651);
+body {
+  background-color: rgba(222, 184, 135, 0.651);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: darkseagreen;
+  overflow: hidden;
+}
+.wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  /* background: lightslategray; */
+  border-radius: 50%;
+}
+.number-hours {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  
+}
+.number-hours span {
+  position: absolute;
+  /* 360deg/12 = 30 deg */
+  transform: rotate(calc(var(--index) * 30deg));
+  inset: 6px;
+  text-align: center;
+}
+.number-hours span p {
+  font-size: 52px;
+  transform: rotate(calc(var(--index) * -30deg));
+  color: black;
+  text-shadow: 0 0 10px black;
+  
 }
